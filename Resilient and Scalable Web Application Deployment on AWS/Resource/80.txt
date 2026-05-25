@@ -1,0 +1,69 @@
+cat > /var/www/html/index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Welcome Ritesh Behal</title>
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a,#0f172a);
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    text-align:center;
+    padding:50px 70px;
+    border-radius:25px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    box-shadow:0 10px 35px rgba(0,0,0,0.5);
+}
+
+h1{
+    color:#38bdf8;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+p{
+    color:#e2e8f0;
+    font-size:22px;
+}
+
+strong{
+    color:#22c55e;
+    font-size:24px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>
+        Welcome Ritesh Behal
+    </h1>
+
+    <p>
+        Powered by <strong>Ritesh Behal</strong>
+    </p>
+
+</div>
+
+</body>
+</html>
+EOF

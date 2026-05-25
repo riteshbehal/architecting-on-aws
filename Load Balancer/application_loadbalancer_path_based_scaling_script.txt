@@ -1,0 +1,52 @@
+# For webserver.in
+
+#!/bin/bash
+yum update -y
+
+# Install Apache
+yum install -y httpd
+
+# Start and enable Apache to run on boot
+systemctl start httpd
+systemctl enable httpd
+
+# Create a simple HTML file in Root Directory
+echo "This is the CloudFolks HUB Page served at Root" > /var/www/html/index.html
+
+
+
+
+
+
+# For aws
+
+#!/bin/bash
+yum update -y
+
+# Install Apache
+yum install -y httpd
+
+# Start and enable Apache to run on boot
+systemctl start httpd
+systemctl enable httpd
+
+# Create a simple HTML file in the /var/www/html Directory
+echo "This is the AWS page" > /var/www/html/index.html
+
+
+
+
+# For azure
+
+#!/bin/bash
+yum update -y
+
+# Install Apache
+yum install -y httpd
+
+# Start and enable Apache to run on boot
+systemctl start httpd
+systemctl enable httpd
+
+# Create a simple HTML file in the /var/www/html Directory
+echo "This is the Azure page served at azure" > /var/www/html/index.html

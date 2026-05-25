@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS S3 Result</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg,#00b09b,#96c93d);
+    }
+
+    .result-container{
+      background:white;
+      padding:60px;
+      border-radius:25px;
+      text-align:center;
+      width:700px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+      animation: popup 1s ease;
+    }
+
+    .checkmark{
+      font-size:80px;
+      color:green;
+      margin-bottom:20px;
+    }
+
+    h1{
+      color:#222;
+      margin-bottom:25px;
+      font-size:45px;
+    }
+
+    p{
+      font-size:24px;
+      color:#555;
+      line-height:1.8;
+      margin-bottom:35px;
+    }
+
+    button{
+      padding:15px 40px;
+      border:none;
+      border-radius:40px;
+      background:#0072ff;
+      color:white;
+      font-size:22px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      transform:scale(1.05);
+      background:#0057cc;
+    }
+
+    @keyframes popup{
+      from{
+        opacity:0;
+        transform:scale(0.7);
+      }
+
+      to{
+        opacity:1;
+        transform:scale(1);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="result-container">
+
+    <p>
+      Hello Ritesh 👋 <br><br>
+      Welcome to AWS S3 CORS Configuration Demo.
+    </p>
+
+
+    <div class="checkmark">✔</div>
+
+    <h1>CORS Test Successful</h1>
+
+    <button onclick="goBack()">
+      Go Back
+    </button>
+
+  </div>
+
+  <script>
+
+    function goBack(){
+
+      window.location.href = "index.html";
+
+    }
+
+  </script>
+
+</body>
+</html>

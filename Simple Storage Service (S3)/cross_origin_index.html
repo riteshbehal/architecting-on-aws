@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS S3 CORS Demo</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: linear-gradient(135deg,#00c6ff,#0072ff);
+      position:relative;
+    }
+
+    .container{
+      width:80%;
+      max-width:900px;
+      text-align:center;
+      color:white;
+      z-index:2;
+      animation: fadeIn 2s ease;
+    }
+
+    h1{
+      font-size:50px;
+      margin-bottom:20px;
+    }
+
+    h2{
+      font-size:60px;
+      margin-bottom:25px;
+      font-weight:bold;
+    }
+
+    p{
+      font-size:24px;
+      line-height:1.7;
+      margin-bottom:40px;
+    }
+
+    button{
+      padding:18px 45px;
+      font-size:24px;
+      border:none;
+      border-radius:50px;
+      background:white;
+      color:#0072ff;
+      cursor:pointer;
+      transition:0.4s;
+      font-weight:bold;
+      box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    button:hover{
+      transform:scale(1.1);
+      background:#eaf3ff;
+    }
+
+    .background-circle{
+      position:absolute;
+      border-radius:50%;
+      opacity:0.2;
+    }
+
+    .circle1{
+      width:350px;
+      height:350px;
+      background:white;
+      top:-100px;
+      left:-100px;
+    }
+
+    .circle2{
+      width:250px;
+      height:250px;
+      background:#ffffff;
+      bottom:-80px;
+      right:-80px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="background-circle circle1"></div>
+  <div class="background-circle circle2"></div>
+
+  <div class="container">
+
+    <h1>Hello Ritesh 👋</h1>
+
+    <h2>Welcome to AWS S3 CORS Testing</h2>
+
+    <p>
+      Experience secure cross-origin resource sharing
+      using AWS S3 Static Website Hosting.
+    </p>
+
+    <button id="testBtn">
+      Test CORS
+    </button>
+
+  </div>
+
+  <script>
+
+    const testBtn = document.getElementById("testBtn");
+
+    testBtn.addEventListener("click", () => {
+
+      window.location.href = "http://webobject23.s3-website.ap-south-1.amazonaws.com";
+
+    });
+
+  </script>
+
+</body>
+</html>
