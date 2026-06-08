@@ -57,7 +57,102 @@ This ensures a smooth transition from periods of low utilization to high utiliza
 | Launches Capacity Before Demand    | No              | Yes                |
 | Suitable for Predictable Workloads | Limited         | Excellent          |
 
----
+
+
+
+🚀 Dynamic Scaling in AWS
+What is Dynamic Scaling?
+
+Dynamic Scaling automatically adjusts the number of Amazon EC2 instances in an Auto Scaling Group based on real-time demand.
+
+Instead of manually adding or removing servers, AWS continuously monitors metrics such as CPU utilization, network traffic, or custom CloudWatch metrics and scales infrastructure automatically.
+
+Business Benefits
+
+✅ Optimized Infrastructure Cost
+✅ Improved Application Availability
+✅ Automatic Response to Traffic Spikes
+✅ Reduced Manual Operations
+✅ Better User Experience During Peak Loads
+
+🏗️ Dynamic Scaling Architecture
+                   Users
+                     │
+                     ▼
+            ┌─────────────────┐
+            │ Application LB  │
+            └────────┬────────┘
+                     │
+        ┌────────────┴────────────┐
+        │                         │
+        ▼                         ▼
+   EC2 Instance 1           EC2 Instance 2
+        │                         │
+        └────────────┬────────────┘
+                     │
+              Auto Scaling Group
+                     │
+             CloudWatch Metrics
+                     │
+       ┌─────────────┴─────────────┐
+       │                           │
+       ▼                           ▼
+   Scale Out                  Scale In
+  (+ Instances)             (- Instances)
+📈 Dynamic Scaling Workflow
+Scale Out (Increase Capacity)
+CloudWatch monitors CPU utilization.
+CPU exceeds defined threshold (for example 70%).
+Auto Scaling Group launches additional EC2 instances.
+Application Load Balancer automatically distributes traffic.
+Scale In (Reduce Capacity)
+Traffic decreases.
+CPU utilization falls below threshold (for example 30%).
+Auto Scaling Group terminates unnecessary EC2 instances.
+Cost is optimized by running only required resources.
+⚙️ Example Dynamic Scaling Policy
+Metric	Condition	Action
+CPU Utilization	> 70% for 5 Minutes	Add 2 Instances
+CPU Utilization	< 30% for 10 Minutes	Remove 1 Instance
+🔄 Dynamic Scaling Flow
+Traffic Increase
+       │
+       ▼
+CloudWatch Alarm
+       │
+       ▼
+Auto Scaling Policy Triggered
+       │
+       ▼
+Launch New EC2 Instances
+       │
+       ▼
+Load Balancer Distributes Traffic
+       │
+       ▼
+Application Remains Responsive
+🎯 AWS Services Used
+Service	Purpose
+Amazon EC2	Application Servers
+Auto Scaling Group	Automatic Capacity Management
+Amazon CloudWatch	Monitoring and Metrics
+Application Load Balancer	Traffic Distribution
+IAM	Secure Service Permissions
+💡 Real-World Scenario
+
+An e-commerce website typically receives 1,000 users per hour but experiences traffic spikes of 10,000 users during a flash sale.
+
+With Dynamic Scaling:
+
+Normal Hours → 2 EC2 Instances
+Moderate Traffic → 4 EC2 Instances
+Flash Sale → 10 EC2 Instances
+Post Sale → Automatically returns to 2 EC2 Instances
+
+This ensures high availability while minimizing infrastructure costs.
+
+<img width="1024" height="1024" alt="as1" src="https://github.com/user-attachments/assets/b7590146-d9c0-4a46-9cc7-592a4290a458" />
+
 
 ## Additional Resources
 
