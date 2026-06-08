@@ -8,6 +8,9 @@ For applications that experience predictable traffic patterns and require signif
 
 ---
 
+<img width="713" height="986" alt="IPv4CIDRChart_2015 width-800" src="https://github.com/user-attachments/assets/407a8a9b-1cf4-4aaa-ad91-612fa5e4eaaf" />
+
+
 ## Why Use Predictive Scaling?
 
 Predictive scaling is particularly useful when:
