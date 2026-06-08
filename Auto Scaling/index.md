@@ -9,6 +9,7 @@ For applications that experience predictable traffic patterns and require signif
 ---
 
 <img width="713" height="986" alt="IPv4CIDRChart_2015 width-800" src="https://github.com/user-attachments/assets/407a8a9b-1cf4-4aaa-ad91-612fa5e4eaaf" />
+<img width="1559" height="898" alt="image" src="https://github.com/user-attachments/assets/6c9e32fd-69d2-4735-8791-6db7d18ce0de" />
 
 
 ## Why Use Predictive Scaling?
