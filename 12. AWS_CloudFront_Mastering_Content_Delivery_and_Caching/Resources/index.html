@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CloudFreeks | Global Performance Demo</title>
+  <style>
+    :root{
+      --brand:#1e73be;
+      --brand-dark:#15578f;
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#1d2939;
+      --muted:#667085;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    header{
+      background:linear-gradient(135deg,var(--brand),var(--brand-dark));
+      color:#fff;
+      padding:28px 20px;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:2rem}
+    header p{margin:8px 0 0;color:#e8f4ff}
+    main{
+      max-width:1100px;
+      margin:0 auto;
+      padding:28px 18px 80px;
+    }
+    .hero, .section{
+      background:var(--card);
+      border:1px solid #e4e7ec;
+      border-radius:18px;
+      box-shadow:0 6px 20px rgba(16,24,40,.06);
+      padding:24px;
+      margin-bottom:22px;
+    }
+    .hero{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:24px;
+      align-items:center;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#eaf4ff;
+      color:var(--brand-dark);
+      font-weight:700;
+      font-size:.88rem;
+      margin-bottom:14px;
+    }
+    h2{margin:0 0 10px}
+    p{margin:0 0 12px;color:var(--muted)}
+    .feature-list{
+      margin:14px 0 0;
+      padding-left:18px;
+      color:var(--text);
+    }
+    .feature-list li{margin:6px 0}
+    .preview{
+      background:linear-gradient(180deg,#f8fbff,#eef6ff);
+      border:1px dashed #c6dbf7;
+      border-radius:16px;
+      padding:16px;
+      min-height:260px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:14px;
+    }
+    .media-box{
+      border-radius:14px;
+      background:#fff;
+      border:1px solid #d0d5dd;
+      padding:14px;
+    }
+    .media-title{
+      font-weight:700;
+      margin-bottom:6px;
+      color:var(--brand-dark);
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .card{
+      border:1px solid #e4e7ec;
+      border-radius:14px;
+      padding:18px;
+      background:#fff;
+      min-height:140px;
+    }
+    .card h3{margin:0 0 8px;font-size:1.05rem}
+    footer{
+      text-align:center;
+      padding:18px;
+      color:#fff;
+      background:linear-gradient(135deg,var(--brand-dark),var(--brand));
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      font-size:.95rem;
+    }
+    .small{font-size:.92rem;color:var(--muted)}
+    @media (max-width: 900px){
+      .hero,.grid{grid-template-columns:1fr}
+      footer{position:static}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CloudFreeks</h1>
+    <p>Static website hosted on Amazon S3 and accelerated with Amazon CloudFront</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="badge">CloudFreeks Demo</span>
+        <h2>Global content delivery, faster user experience</h2>
+        <p>
+          This sample page is designed for the CloudFreeks CloudFront lab. Replace the placeholders
+          below with your uploaded S3 object URLs after you copy them from the bucket.
+        </p>
+        <ul class="feature-list">
+          <li>Static website hosted in Amazon S3</li>
+          <li>Video and image assets loaded from S3 object URLs</li>
+          <li>CloudFront-ready origin configuration</li>
+        </ul>
+      </div>
+
+      <div class="preview">
+        <div class="media-box">
+          <div class="media-title">Example Video</div>
+          <video controls width="100%" style="border-radius:10px; background:#000;">
+            <source src="https://cloudfreeks-demo.s3.us-east-1.amazonaws.com/intro.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="media-box">
+          <div class="media-title">Example Image</div>
+          <img src="https://cloudfreeks-demo.s3.us-east-1.amazonaws.com/wallpaper.png"
+            alt="Example Image"
+            style="width:100%; border-radius:10px; display:block;"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <div class="card">
+          <h3>Before CloudFront</h3>
+          <p>Users connect directly to the S3 website endpoint, so distant visitors may see higher latency.</p>
+        </div>
+        <div class="card">
+          <h3>After CloudFront</h3>
+          <p>Content is cached at edge locations and delivered from the nearest point of presence.</p>
+        </div>
+        <div class="card">
+          <h3>CloudFreeks Use Case</h3>
+          <p>Ideal for product pages, media-rich landing pages, and global demo websites.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 CloudFreeks.com | Powered by AWS CloudFront and Amazon S3
+  </footer>
+</body>
+</html>
