@@ -1,0 +1,6 @@
+﻿"customer_id,job_title,email_address,full_name,phone_number,city,state"
+"1,Software Engineer,john.doe@example.com,John Doe,9876543210,Meerut,Uttar Pradesh"
+"2,Data Analyst,jane.smith@example.com,Jane Smith,9123456780,Delhi,Delhi"
+"3,Cloud Developer,rahul.verma@example.com,Rahul Verma,9988776655,Noida,Uttar Pradesh"
+"4,Database Administrator,anita.sharma@example.com,Anita Sharma,9090909090,Jaipur,Rajasthan"
+"5,Backend Developer,amit.kumar@example.com,Amit Kumar,9012345678,Lucknow,Uttar Pradesh"
