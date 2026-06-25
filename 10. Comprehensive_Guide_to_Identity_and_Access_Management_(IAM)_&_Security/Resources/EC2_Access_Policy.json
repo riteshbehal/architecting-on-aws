@@ -1,0 +1,17 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:StartInstances",
+        "ec2:StopInstances",
+        "ec2:TerminateInstances"
+      ],
+      "Resource": [
+        "arn:aws:ec2:<region>:<account-id>:instance/<instance-id-1>",
+        "arn:aws:ec2:<region>:<account-id>:instance/<instance-id-2>"
+      ]
+    }
+  ]
+}
