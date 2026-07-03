@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Id": "__default_policy_ID",
+  "Statement": [
+    {
+      "Sid": "__owner_statement",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "<Your-Root-User-ARN>"
+      },
+      "Action": "SQS:*",
+      "Resource": "Your-SQS-Queue-ARN>"
+    },
+    {
+      "Sid": "topic-subscription-arn:aws:sns:us-east-1:463646775279:Test-Topic",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "sns.amazonaws.com"
+      },
+      "Action": "SQS:SendMessage",
+      "Resource": "Your-SQS-Queue-ARN>",
+      "Condition": {
+        "ArnLike": {
+          "aws:SourceArn": "<Your-SNS-Topic-ARN>"
+        }
+      }
+    }
+  ]
+}
