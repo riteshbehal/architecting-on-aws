@@ -1,0 +1,24 @@
+## Install Docker
+sudo dnf update -y 
+sudo dnf install docker -y 
+sudo systemctl enable docker 
+sudo systemctl start docker 
+sudo usermod -aG docker ec2-user 
+newgrp docker
+
+Verify Docker Installation by running - docker --version
+
+
+## Install PHP & Composer
+sudo dnf install php-cli unzip git -y
+php -r"copy('https://getcomposer.org/installer', 'composer-setup.php');" 
+php composer-setup.php
+sudo mv composer.phar /usr/local/bin/composer
+
+
+## Install Dependencies (AWS SDK)
+sudo dnf install php-simplexml -y
+composer install
+
+## Build Docker Image
+docker build -t CloudFreeks-S3-PHP .
