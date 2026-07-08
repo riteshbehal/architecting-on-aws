@@ -22,3 +22,13 @@ composer install
 
 ## Build Docker Image
 docker build -t CloudFreeks-S3-PHP .
+
+## Test Image using Variables
+
+docker run -d -p 8080:80 \
+ -e S3_BUCKET=<S3_BUCKET_NAME> \
+ -e AWS_REGION=<AWS_REGION> \
+ -e AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> \
+ -e AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY> \
+ --name php-test cloudfreeks-s3-php
+
