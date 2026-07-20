@@ -1,0 +1,13 @@
+{ 
+    "Version": "2012-10-17", 
+    "Statement": [ 
+        { 
+            "Effect": "Allow", 
+            "Action": "s3:*", 
+            "Resource": [ 
+                "<S3_BUCKET_ARN>", 
+                "<S3_BUCKET_ARN>/*" 
+            ] 
+        } 
+    ] 
+}
