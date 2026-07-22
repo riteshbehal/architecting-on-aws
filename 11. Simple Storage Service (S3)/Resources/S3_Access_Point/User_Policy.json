@@ -1,0 +1,13 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+    {
+        "Effect": "Allow",
+        "Principal": {
+            "AWS": "<IAM User ARN>"
+        },
+        "Action": "s3:PutObject",
+        "Resource": "<Access Point ARN>/object/<Folder>/*"
+        }
+    ]
+}
