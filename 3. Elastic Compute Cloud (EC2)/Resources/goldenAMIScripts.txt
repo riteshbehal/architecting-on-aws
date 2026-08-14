@@ -5,22 +5,6 @@ sudo systemctl start httpd
 
 
 
-
 git clone https://github.com/YOUR-USERNAME/cloudfreeks-ami-demo.git
 sudo cp -r cloudfreeks-ami-demo/* /var/www/html/
 sudo systemctl enable --now httpd
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>CloudFreeks Application</title>
-</head>
-<body>
-    <h1>CloudFreeks Production Web Server</h1>
-    <h2>Deployed using AWS Golden AMI</h2>
-    <p>Application Version: 1.0</p>
-    <p>Environment: Production</p>
-</body>
-</html>
-EOF
