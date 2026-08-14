@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom AMI Demo</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 70px;
+            background: rgba(255, 255, 255, 0.12);
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0 0 15px;
+        }
+
+        p {
+            font-size: 20px;
+            margin: 0;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🚀 Custom AMI Demo</h1>
+        <p>Hosted on Windows Server using IIS</p>
+    </div>
+
+</body>
+</html>
